@@ -7,14 +7,19 @@ public class Collezione {
 	private String luogo;
 	private Vector<operadarte> opere;
 
+	//Creo l'oggetto per l'input
 	Scanner input = new Scanner(System.in);
 
+	//Costruttore
 	public Collezione(String nome, String luogo) {
 		this.nome = nome;
 		this.luogo = luogo;
 		opere = new Vector<operadarte>();
 	}
 
+	/*Metodo per l'inserimento di una nuova opera d'arte
+	 * nella collezione
+	 */
 	public void inserisciOpera() {
 		System.out.println("Inserisci tipologia opera d'arte [Q/S]");
 		String lettera = input.next();
@@ -46,6 +51,8 @@ public class Collezione {
 		}
 	}
 
+	//Metodo per l'accesso ad un'opera d'arte tramite l'inserimento 
+	//del nome
 	public String accediOpera() {
 		System.out.println("Inserisci titolo: ");
 		input.next();
@@ -57,6 +64,7 @@ public class Collezione {
 		return null;
 	}
 
+	//Metodo per la visualizzazione dell'intera collezione
 	public void visualizzaCollezione() {
 		for(int i = 0; i < opere.size(); i++) {
 			System.out.print(opere.get(i).getTitolo()+ " ");
@@ -65,6 +73,7 @@ public class Collezione {
 		}
 	}
 
+	//vari metodi get e set
 	public String getNome() {
 		return nome;
 	}
