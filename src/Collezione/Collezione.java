@@ -1,7 +1,11 @@
 package Collezione;
 import java.util.Scanner;
 import java.util.Vector;
-
+/**
+ * Public class Collezione
+ * @author gians_ji5genm
+ *
+ */
 public class Collezione {
 	private String nome;
 	private String luogo;
@@ -10,14 +14,19 @@ public class Collezione {
 	//Creo l'oggetto per l'input
 	Scanner input = new Scanner(System.in);
 
-	//Costruttore
+	/**
+	 * Constructor 
+	 * @param nome opera
+	 * @param luogo opera
+	 */
 	public Collezione(String nome, String luogo) {
 		this.nome = nome;
 		this.luogo = luogo;
 		opere = new Vector<operadarte>();
 	}
 
-	/*Metodo per l'inserimento di una nuova opera d'arte
+	/**
+	 * Metodo per l'inserimento di una nuova opera d'arte
 	 * nella collezione
 	 */
 	public void inserisciOpera() {
@@ -51,8 +60,12 @@ public class Collezione {
 		}
 	}
 
-	//Metodo per l'accesso ad un'opera d'arte tramite l'inserimento 
+	/**
+	 * Metodo per l'accesso ad un'opera d'arte tramite l'inserimento 
 	//del nome
+	 * @return true se l'operazione è stata eseguita con successo,
+	 * false altrimenti
+	 */
 	public String accediOpera() {
 		System.out.println("Inserisci titolo: ");
 		input.next();
@@ -64,7 +77,9 @@ public class Collezione {
 		return null;
 	}
 
-	//Metodo per la visualizzazione dell'intera collezione
+	/**
+	 * Metodo per la visualizzazione dell'intera collezione
+	 */
 	public void visualizzaCollezione() {
 		for(int i = 0; i < opere.size(); i++) {
 			System.out.print(opere.get(i).getTitolo()+ " ");
@@ -73,11 +88,17 @@ public class Collezione {
 		}
 	}
 
-	//vari metodi get e set
+	/**
+	 * Metodo per ottenre il nome
+	 * @return nome opera
+	 */
 	public String getNome() {
 		return nome;
 	}
-
+	/**
+	 * Metodo per ottenre il luogo
+	 * @return luogo
+	 */
 	public String getLuogo() {
 		return luogo;
 	}
